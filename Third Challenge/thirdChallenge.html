@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+Lukas Heading
+18131083
+9/8/16
+-->
+<html>
+    <head>
+        <title>Third Challenge Project</title>
+        <meta charset="UTF-8">
+        <style>
+            #columnsWrapper {
+                border: 2px solid goldenrod;
+                border-radius: 100px;
+                padding: 50px;
+                margin: 20px auto;
+                width: 1000px;
+                align-content: center;
+            }
+            #header {
+                text-align: center;
+            }
+            .columnleft {
+                /*Physical width = ((10*2)Border + (10*2)Margin + (25*2)Padding + 250content = 340px*/
+                border: 10px double black;
+                border-radius: 50px;
+                padding: 25px;
+                margin: 10px;
+                text-align: justify;
+                width: 250px;
+                float: left;
+                background-color: forestgreen;
+            }
+            .columnmiddle {
+                /*Physical width = (10*2)Border + (10*2)Margin + (25*2)Padding + 150content = 240px*/
+                border: 10px double black;
+                border-radius: 50px;
+                padding: 25px;
+                margin: 10px;
+                text-align: justify;
+                width: 150px;
+                float: left;  
+                background-color: gold;
+            }
+            .columnright {
+                /*Physical width = (10*2)Border + (10*2)Margin + (25*2)Padding + 330content = 420px*/
+                border: 10px double black;
+                border-radius: 50px;
+                padding: 25px;
+                margin: 10px;
+                text-align: justify;
+                /* 1000 -  (25*6) - (10*6)- (10*6) - 250 - 150 = 330 */
+                width: 330px;
+                float: left;
+                background-color: tomato;
+            }
+            .group:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "columnsWrapper" class = "group">
+            <h1 id = "header">CS2830 Third Challenge</h1>
+            <div class = "columnleft">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap 
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                with the release of Letraset sheets containing Lorem Ipsum passages, 
+                and more recently with desktop publishing software like Aldus 
+                PageMaker including versions of Lorem Ipsum.</div>
+            
+            <div class = "columnmiddle">It is a long established fact that a reader will be distracted by the 
+                readable content of a page when looking at its layout. 
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
+                as opposed to using 'Content here, content here', making it look like readable English. 
+                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,
+                and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+                Various versions have evolved over the years, sometimes by accident, 
+                sometimes on purpose (injected humour and the like).</div>
+            
+            <div class = "columnright">There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by injected humour,
+                or randomised words which don't look even slightly believable. 
+                If you are going to use a passage of Lorem Ipsum, 
+                you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+                All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+                making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, 
+                combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+                The generated Lorem Ipsum is therefore always free from repetition, injected humour, 
+                or non-characteristic words etc.</div>
+        </div>
+        <h2 id = "header">Created by: Lukas Heading</h2>
+    </body>
+</html>
