@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>About</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(function(){
+                $("#header").load("header.html"); 
+                $("#footer").load("footer.html")
+                $("#sidebar").load("sidemenu.html"); 
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main">		
+            <div id="header"></div>
+                <div id="slideshow_container">  
+                    <div class="slideshow">
+                        <ul class="slideshow">
+                            <li class="show"><img width="940" height="250" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Stargate_SG-1_1997_logo.svg/1000px-Stargate_SG-1_1997_logo.svg.png" alt="&quot;Enter your caption here&quot;" /></li>
+                            
+                        </ul> 
+                    </div>	
+                </div>   
+                <div id="site_content">		
+                    <div id ="sidebar"></div>	
+                    <div id="content">
+                        <div class="content_item">
+                            <h1>Welcome To the Stargate SG-1 Fan Created Page</h1> 
+                            <p>This website was created by Lukas Heading for CS 2830 for my final project. It implements the requirements for the project, by displaying information about the tv show Stargate SG-1</p>   		
+                            <p></p>
+                        </div>
+                        <div class="content_item">
+                            <iframe width="600" height="480" src="https://www.youtube.com/embed/csFZPxTwkuY" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        </div>
+                    </div>  
+                </div> 	
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>

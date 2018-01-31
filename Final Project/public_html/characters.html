@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Characters</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(function(){
+                $("#header").load("header.html"); 
+                $("#footer").load("footer.html");
+                $("#sidebar").load("sidemenu.html"); 
+            });
+        </script>
+    </head>
+    <body>
+        <?php include 'session.php';?>
+        <div id="main">		
+            <div id="header"></div>
+                <div id="slideshow_container">  
+                    <div class="slideshow">
+                        <ul class="slideshow">
+                            <li class="show"><img width="940" height="250" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Stargate_SG-1_1997_logo.svg/1000px-Stargate_SG-1_1997_logo.svg.png" alt="&quot;Enter your caption here&quot;" /></li>
+                            
+                        </ul> 
+                    </div>	
+                </div>   
+                <div id="site_content">		
+                    <div id ="sidebar"></div>	
+                    <div id="content">
+                        <div class="content_item">
+                            <h1>Jack O'Neil</h1> 
+                            <p><img width="250" height="382" src="https://upload.wikimedia.org/wikipedia/en/a/a5/Jackoneill.jpg" alt="&quot;Enter your caption here&quot;" /></p>   		
+                            <p>In his first appearance in the 1994 film as Jack O'Neil, the character leads the first team to go through the Stargate on a reconnaissance mission. He subsequently becomes the main character of the television series Stargate SG-1 created in 1997 as a sequel to the movie. In the first seven seasons of the show, O'Neill is the leader of the team SG-1, a part of Stargate Program whose goal is to explore the galaxy and defend against alien threats.</p>
+                        </div>
+                        <div class="content_item">
+                            <h1>Dr. Daniel Jackson</h1> 
+                            <p><img width="486" height="332" src="https://upload.wikimedia.org/wikipedia/en/f/f6/Doctor_Daniel_Jackson_%28James_Spader%292.jpg" alt="&quot;Enter your caption here&quot;" /></p>   		
+                            <p>In the 1994 film, Dr. Jackson is an archaeologist who is a part of the first team to go through the Stargate on a reconnaissance mission, led by Colonel Jack O'Neil. He then becomes one of the main characters of the subsequent television series Stargate SG-1, where he, Jack O'Neill, Samantha Carter and Teal'c make up SG-1, a part of the Stargate Program whose goal is to explore the galaxy and defend against alien threats. Jackson is part of SG-1 until his death at the end of the season 5, when he is replaced by Jonas Quinn.</p>
+                        </div>
+                        <div class="content_item">
+                            <h1>Samantha Carter</h1> 
+                            <p><img width="273" height="364" src="https://upload.wikimedia.org/wikipedia/en/6/6b/Colsamcarter.jpg" alt="&quot;Enter your caption here&quot;" /></p>   		
+                            <p>Captain Samantha Carter made her first appearance in "Children of the Gods", the pilot episode of Stargate SG-1, as a United States Air Force Captain who joined the fictional SG-1 team under the command of Colonel Jack O'Neill. After being promoted to Major in Season 3, Carter remained O'Neill's second-in-command until her promotion to Lieutenant-Colonel early in Season 8, at which point she assumed command of the SG-1 team and O'Neill was promoted to Brigadier-General in order to lead Stargate Command. Between Seasons 8 and 9 of SG-1, following the defeat of the Replicators and downfall of the Goa'uld system lords, she accepted a position as Head of the Stargate Research and Development Programme, based in Nevada. At the time of the emergence of the Ori, she was engaged in deep-space research but was reassigned to SG-1, now under the command of Lieutenant Colonel Cameron Mitchell, on her return to Earth. Following the defeat of the Ori in Stargate: The Ark of Truth, Carter was promoted to a "full bird" Colonel and appointed as the new commander of the Atlantis expedition early in Season 4 of Atlantis. Later, Carter is given command of the Daedalus-class ship, the George Hammond.</p>
+                        </div>
+                        <div class="content_item">
+                            <h1>Teal'c</h1> 
+                            <p><img width="321" height="526" src="https://upload.wikimedia.org/wikipedia/en/8/86/Teal%27c.jpg" alt="&quot;Enter your caption here&quot;" /></p>   		
+                            <p>Played by Christopher Judge, Teal'c is a Jaffa warrior from the planet Chulak. As a Jaffa, Teal'c is a genetically modified human with an abdominal pouch that serves as an incubator for a larval Goa'uld. The larval symbiote grants enhanced strength, health, healing, and longevity; Teal'c is around 100 years old during the show's run and ages an additional 50 years in the final SG-1 episode. Teal'c's most notable feature is a golden tattoo found on his forehead, a sign that he once served the System Lord Apophis as First Prime, the most senior Jaffa rank.
+                            Teal'c is introduced in the pilot episode of Stargate SG-1, "Children of the Gods". The character appears in all episodes of SG-1 except season 8's "Prometheus Unbound", making him the character with the most episode appearances. Teal'c also appears in the direct-to-DVD films Stargate: The Ark of Truth and Stargate: Continuum, as well as the Stargate Atlantis season 4 episodes "Reunion" and "Midway". In 2002, Christopher Judge was nominated for a Saturn Award in the category "Best Supporting Actor in a Television Series".</p>
+                        </div>
+                    </div>  
+                </div> 	
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>

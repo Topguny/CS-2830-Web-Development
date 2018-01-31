@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html>
+
+    <head>
+        <title>Stargate SG-1 Fan Page</title>
+        <meta name="description" content="website description" />
+        <meta name="keywords" content="website keywords, website keywords" />
+        <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(function(){
+                $("#header").load("header.html"); 
+                $("#footer").load("footer.html");
+                $("#sidebar").load("sidemenu.html");
+            });
+            function getVote(int) {
+                if (window.XMLHttpRequest) {
+                    xmlhttp=new XMLHttpRequest();
+                } else {  // code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function() {
+                if (this.readyState==4 && this.status==200) {
+                    document.getElementById("poll").innerHTML=this.responseText;
+                }
+            }
+            xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+            xmlhttp.send();
+}
+        </script> 
+    </head>
+    <body>
+        <div id="main">		
+            <div id="header"></div>
+                <div id="slideshow_container">  
+                    <div class="slideshow">
+                        <ul class="slideshow">
+                            <li class="show"><img width="940" height="250" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Stargate_SG-1_1997_logo.svg/1000px-Stargate_SG-1_1997_logo.svg.png" alt="&quot;Enter your caption here&quot;" /></li>
+                            
+                        </ul> 
+                    </div>	
+                </div>   
+                <div id="site_content">		
+                    <div id ="sidebar"></div>	
+                    <div id="content">
+                        <div class="content_item">
+                            <h1>Welcome To the Stargate SG-1 Fan Created Page</h1> 
+                            <p>Stargate SG-1 (often abbreviated as SG-1) is an adventure and military science fiction television series and part of Metro-Goldwyn-Mayer's Stargate franchise. The show, created by Brad Wright and Jonathan Glassner, is based on the 1994 science fiction film Stargate by Dean Devlin and Roland Emmerich. The television series was filmed in and around the city of Vancouver, British Columbia, Canada. The series premiered on Showtime on July 27, 1997 and moved to the Sci Fi Channel on June 7, 2002; the final episode first aired on Sky1 on March 13, 2007. With 214 episodes over 10 seasons, Stargate SG-1 had surpassed The X-Files as the longest-running North American science fiction television series, until it was surpassed by the series Supernatural in 2016.</p>   		
+                            <p>The plot of Stargate SG-1 picks up a year after the conclusion of the events recounted in the original feature film. It follows the present-day adventures of SG-1, a military team from Earth. SG-1 and a dozen other SG teams venture to distant planets using a fictional alien portal known as a Stargate, which in the series is housed in a top-secret United States Air Force military base known as Stargate Command (SGC) in the underground Cheyenne Mountain Complex in Colorado Springs, Colorado. In the first eight seasons, the mission of the SG teams is to explore the galaxy and search for alien technology and allies to defend Earth against the Goa'uld, a snake-like parasitic alien race that takes humans as unwilling hosts. As explained in the series' backstory, the Goa'uld had transported human slaves from Earth to other habitable planets across the galaxy thousands of years ago and now pose as gods of old Earth mythologies, particularly Ancient Egypt. SG-1 eventually learns that highly evolved human-like beings, known as the Ancients, had originally built the Stargate network millions of years earlier, before ascending to a higher plane of existence, after which they pledged not to interfere in the lives of other species. The Ori, a faction of the same race as the Ancients who instead use their powers to subjugate other species by religious indoctrination, assume the role of the main antagonists in seasons 9 and 10.</p>
+                        </div>
+                    </div>  
+                </div> 	
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>
