@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+    Lukas Heading
+    18131083
+    11/1/16
+-->
+<html>
+    <head>
+	   <title>Chal9 - AJAX Dinosaurs</title>
+        
+        
+	   <script>
+        
+	   function getHome() {
+          document.getElementById("dinoBox").innerHTML = "Loading...";
+		  var xmlHttp = new XMLHttpRequest();
+            
+		  xmlHttp.open("GET", "http://ec2-54-226-50-144.compute-1.amazonaws.com/Challenge9/webService.php?content=home", true);
+          xmlHttp.send();
+           
+		  xmlHttp.onload = function() {
+			 if (xmlHttp.status == 200) {
+				var contentBox = document.getElementById("dinoBox");
+                    
+                var home = xmlHttp.responseText;
+               
+                console.dir(home);
+                
+                contentBox.innerHTML = home; 
+				
+			 }
+		  }
+		  
+	   }
+    
+        function getXMLDinos() {
+          document.getElementById("dinoBox").innerHTML = "Loading...";
+		  var xmlHttp = new XMLHttpRequest();
+		
+          xmlHttp.open("GET", "http://ec2-54-226-50-144.compute-1.amazonaws.com/Challenge9/webService.php?content=data&format=xml", true);
+		  xmlHttp.send();        
+          
+		  xmlHttp.onload = function() {
+			 if (xmlHttp.status == 200) {
+                 
+				var xmlDoc = xmlHttp.responseXML;
+				
+				var output = '';
+				
+				DinosName = xmlDoc.getElementsByTagName('name');
+                 
+                DinosPeriod = xmlDoc.getElementsByTagName('period');
+				
+				console.dir(DinosName); 
+				
+				for (i = 0; i < DinosName.length; i++) {
+					output += DinosName[i].childNodes[0].nodeValue + " lived during the " + DinosPeriod[i].childNodes[0].nodeValue + "<br>";
+				}
+			
+				var divObj = document.getElementById('dinoBox');
+				
+				divObj.innerHTML = output;
+				
+			 }
+		  }
+	   }
+           
+        function getJSONDinos() {
+            document.getElementById("dinoBox").innerHTML = "Loading...";
+            
+            var xmlHttp = new XMLHttpRequest();
+            
+            xmlHttp.open("GET", "http://ec2-54-226-50-144.compute-1.amazonaws.com/Challenge9/webService.php?content=data&format=json", true);
+            xmlHttp.send();
+            
+            xmlHttp.onload = function() {
+                if (xmlHttp.status == 200) {
+                    var contentBox = document.getElementById("dinoBox");
+                    
+                    var dinos = xmlHttp.responseText;
+                    
+                    console.dir(dinos);
+                    dinos = JSON.parse(dinos);
+                    console.dir(dinos);
+                    
+                    dinoBox.innerHTML = "";
+                    
+                    for (i = 0; i < dinos.length; i++) {
+                        
+                        dinoBox.innerHTML += dinos[i].name + " was a " + dinos[i].diet + "<br>"; 
+                    }
+                }
+            };
+              
+        }
+              
+	   </script>
+    </head>
+    <body>
+	   <h1>Dinosaur Web Application</h1>
+	   <div id="dinoBox"></div>
+	   <button type="button" onclick="getHome()">home</button>
+       <button type="button" onclick="getXMLDinos()">XML Dinos</button>
+       <button type="button" onclick="getJSONDinos()">JSON Dinos</button>
+        
+    </body>
+</html>
