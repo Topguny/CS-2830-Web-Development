@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+Lukas Heading
+18131083
+9/13/2016
+-->
+<html lang = "en">
+    <head>
+        <title>Fourth Challenge</title>
+        <meta charset="UTF-8">
+        <style>
+            @import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
+             
+            #MovieTheaterShowtimes th, #MovieTheaterShowtimes td {
+                border: 3px solid black;;
+                font-family: 'Permanent Marker', cursive;
+            }
+            
+            #MovieTheaterShowtimes {
+                font-size: 16pt;
+                width: 100%; 
+                border-collapse: collapse;
+            }
+            
+            .padding{
+                padding: 5px
+            }
+            
+            #MovieTheaterShowtimes tr:nth-child(2n+4){
+               background-color: gainsboro;
+            }
+            
+            .MovieBefore5{
+                background: #C00; 
+                padding: 5px;
+            }
+            
+            #header {
+                background-color: dimgray;
+                color: goldenrod;
+                font-size: 32pt;
+            }
+            
+            #headerpadding{
+                padding: 35px;
+            }
+            
+            #Date {
+                background-color: dimgray; 
+                color: goldenrod;
+                font-size: 24pt;
+            }
+            
+            #datepadding{
+                padding: 30px;
+            }
+            
+            img.poster { 
+                height: 200px;
+                align-content: center;
+                padding: 5px;
+            }
+            
+            .HeaderTags {
+                background-color: goldenrod;
+                padding: 5px;
+            }
+            
+            #MovieTheaterShowtimes td:nth-child(1) {
+                text-align: center;
+            }
+            
+            #MovieTheaterShowtimes td:nth-child(3) {
+                text-align: center;
+            }
+            
+            #MovieTheaterShowtimes td:nth-child(5) {
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <table id = "MovieTheaterShowtimes">
+            <tr id = "header">
+                <th id = "headerpadding" colspan = "6">
+                    Movie Theater Showtimes 				
+                </th>
+            </tr>
+            <tr id = "Date">
+                <th id="datepadding" colspan = "6">
+                    Saturday September 10, 2016 				
+                </th>
+            </tr>
+            <tr class = "HeaderTags ">
+                <th>Poster</th>
+                <th>Movie</th>
+                <th>Rating</th>
+                <th>Length</th>
+                <th>Showtimes</th>
+                <th>Amenities</th>
+            </tr>
+            <!--
+            <tr class = "padding">
+                <td rowspan="3"><img class="poster" src="Posters/jasonbourne.jpg" alt="poster"></td>
+                <td rowspan="3">Jason Bourne</td>
+                <td rowspan="3">PG-13</td>
+                <td rowspan="3">2 hour(s) 3 minutes</td>
+                <td class= "MovieBefore5">1:20pm</td>
+                <td rowspan="3">CC, DV</td>
+                <tr></tr>
+                <td>6:40pm</td>
+            </tr>
+            <tr class = "padding">
+                <td rowspan="3"><img class="poster" src="Posters/mechanicresurrection_poster.jpg" alt="poster"></td>
+                <td rowspan="3">Mechanic: Resurrection</td>
+                <td rowspan="3">R</td>
+                <td rowspan="3">1 hour(s) 39 minutes</td>
+                <td class = "MovieBefore5">4:40pm</td>
+                <td rowspan="3">CC, DV</td>
+                <tr></tr>
+                <td>9:45pm</td>
+            </tr>
+            <tr class = "padding">
+                <td rowspan="3"><img class="poster" src="Posters/sausageparty.jpg" alt="poster"></td>
+                <td rowspan="3">Sausage Party</td>
+                <td rowspan="3">R</td>
+                <td rowspan="3">1 hour(s) 29 minutes</td>
+                <td class="MovieBefore5">4:25pm</td>
+                <td rowspan="3">CC, DV</td>
+                <tr></tr>
+                <td>9:55pm</td>
+            </tr>
+            <tr class = "padding">
+                <td rowspan="7"><img class="poster" src="Posters/startrekbeyond_poster.jpg" alt="poster"></td>
+                <td rowspan="7">Star Trek Beyond</td>
+                <td rowspan="7">PG-13</td>
+                <td rowspan="7">2 hour(s) 2 minutes</td>
+                <td class="MovieBefore5">1:10pm</td>
+                <td rowspan="7">CC, DV</td>
+                <tr></tr>
+                <td class="MovieBefore5">4:05pm</td>
+                <tr></tr>
+                <td >7:15pm</td>
+                <tr></tr>
+                <td>10:00pm</td>
+            </tr>
+            -->
+            <tr class = "padding">
+                <td rowspan="7"><img class="poster" src="Posters/suicidesquad-poster1.jpg" alt="poster"></td>
+                <td rowspan="7">Suicide Squad</td>
+                <td rowspan="7">PG-13</td>
+                <td rowspan="7">2 hour(s) 3 minutes</td>
+                <td class="MovieBefore5">1:45pm</td>
+                <td rowspan="7">CC, DV</td>
+                <tr></tr>
+                <td class="MovieBefore5">4:35pm</td>
+                <tr></tr>
+                <td>7:25pm</td>
+                <tr></tr>
+                <td>10:15pm</td>
+            </tr>
+        </table>
+    </body>
+</html>
