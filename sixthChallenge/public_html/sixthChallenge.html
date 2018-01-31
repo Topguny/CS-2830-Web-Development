@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+Lukas Heading
+18131083
+9/28/16
+-->
+<html>
+    <head>
+        <title>Sixth Challenge HTML Text Editor</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <script>
+            function TryIt(){
+                var text = document.getElementById("css").value;
+                var text1 = document.getElementById("html").value;
+                var ifr = document.createElement("iframe");
+                ifr.setAttribute("frameborder", "0");
+				ifr.setAttribute('width','100%');
+				ifr.setAttribute('height','100%');
+                document.getElementById("iframe").innerHTML = "";
+                document.getElementById("iframe").appendChild(ifr);
+                var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+                ifrw.document.open();
+                ifrw.document.write(text1 + text);  
+                ifrw.document.close();
+            }
+            
+            function TryIt1(){
+                var text1 = document.getElementById("html").value;
+                var ifr = document.createElement("iframe");
+                ifr.setAttribute("frameborder", "0");
+				ifr.setAttribute('width','100%');
+				ifr.setAttribute('height','100%');
+                document.getElementById("iframe").innerHTML = "";
+                document.getElementById("iframe").appendChild(ifr);
+                var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+                ifrw.document.open();
+                ifrw.document.write(text1);  
+                ifrw.document.close();
+            }
+            
+            function Clear(){
+                document.getElementById("css").value = "";
+                document.getElementById("html").value = "";
+            }
+            
+            function toggleState(item){
+                if(item.classbutton === "on") {
+                    item.classbutton="off";
+                    TryIt1();
+                } else {
+                    item.classbutton="on";
+                    TryIt();
+                }
+            }
+			
+        </script>
+        
+        <style>
+            
+            #html{
+                text-align: left;
+                height: 40vh;
+                width: 49%;
+            }
+            #css{
+                text-align: left;
+                height: 40vh;
+                width: 49%;
+            }
+            #iframe{
+                border: 2px solid black;
+                float: right;
+                height: 81vh;
+                width: 49%;
+            }
+            .padding{
+                padding: 5px;
+            }
+            #wrapper{
+                margin: 5px;
+                
+            }
+			#buttons{
+				padding: 20px;
+			}
+			.button{
+				padding: 10px;
+				height: 50px;
+				width: 100px;
+			}
+        </style>
+    </head>
+    <body>
+        <div id = "wrapper">
+		
+            <div id="iframe">
+                    
+                <iframe style="border:none;">
+                            
+                </iframe>
+                
+            </div>
+            <textarea placeholder ="CSS..." id="css" name="css"></textarea>
+        
+            <br>
+        
+            <textarea placeholder ="HTML..." id="html" name="html"></textarea>
+            
+            <br>
+			<div id="buttons">
+				<button class = "button" type="button" onclick="TryIt()">Launch</button>
+            
+				<button class = "button" type="button" onclick="Clear()">Clear</button>
+            
+				<button class = "button" type="button" onclick="toggleState(this)">Toggle</button>
+			</div>
+        </div>
+    </body>
+</html>
